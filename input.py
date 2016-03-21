@@ -11,13 +11,13 @@ nrows = table.nrows
 ncols = table.ncols
 
 f = []
-for i in range(2,nrows):
+for i in range(nrows):
     a_1 = table.row_values(i)[0:4]
     b_1 = float(table.row_values(i)[6:7][0])
     #b_1 = table.row_values(i)[4:5]
     f_1 = [a_1,b_1]
     f.append(f_1)
-
+print(len(f))
 
 def get_result(f_1, f_2, f_3, f_4):
     a = np.array([f_1[0],f_2[0],f_3[0],f_4[0]])
@@ -29,7 +29,7 @@ def get_result(f_1, f_2, f_3, f_4):
 
 
 
-c = list(itertools.combinations([f[0],f[1],f[2],f[3],f[4],f[5],f[6],f[7],f[8],f[9]],4))
+c = list(itertools.combinations([f[0], f[1], f[2], f[3], f[4], f[5], f[6], f[7], f[8], f[9]], 4))
 
 
 for array in c:
